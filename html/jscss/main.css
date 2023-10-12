@@ -1,0 +1,26 @@
+:root {
+
+}
+@font-face {
+    font-family: 'MuseoSansCyrl';
+    src: url('/MuseoSansCyrl-300.woff2');
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { background: gray; }
+
+body, button
+{ font-family: MuseoSansCyrl, sans-serif; }
+
+[type=checkbox], [type=radio] {
+    position: relative;
+    top: 2px;
+}
+*::-webkit-scrollbar {
+    width: 7px;
+    background-color: #f9f9fd;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #656565;
+}
