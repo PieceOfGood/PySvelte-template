@@ -1,7 +1,24 @@
 <script>
 	import PyButton from "./part/PyButton.svelte";
 	export let name;
+
+	function navigate(event) {
+		// ? Если это событие кнопки мыши:
+		// ?   * x1(3) - навигация назад
+		// ?   * x2(4) - навигация вперёд
+		// ? предотвращаем его выполнение
+		
+		if ([3, 4].some((el) => el === event.button)) {
+			event.preventDefault();
+			event.stopPropagation();
+			console.log("Preven navigate!");
+		}
+	}
 </script>
+
+
+<svelte:window on:mousedown={navigate} on:mouseup={navigate}/>
+
 
 <main>
 	<h1>Hello {name}!</h1>
@@ -9,6 +26,7 @@
 	
 	<PyButton />
 </main>
+
 
 <style>
 	main {
