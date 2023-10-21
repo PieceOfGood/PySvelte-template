@@ -1,14 +1,19 @@
 from aio_dt_protocol import Connection
 from .const import log
+from .executor import Executor
 
 
 async def extend(conn: Connection) -> None:
     """ Регистрация хендлеров, вызываемых из JS-контекста
     пользовательского интерфейса.
     """
+    ui = Executor(conn)
 
     async def button_counter(count: int) -> None:
+        # ? Выводит в stdout
         log.info(f"JS-counter value: <red>{count}</>")
+        # ? И в консоли отладчика браузера
+        ui.exec("console.log", "You click me:", count)
 
     async def unload() -> None:
         """ Вызывается при перезагрузке UI, переходе на
