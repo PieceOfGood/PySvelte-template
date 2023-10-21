@@ -11,7 +11,7 @@ class Executor:
     async def exec(self, func: str, *data: any) -> None:
         """ Вызывает функцию в UI, передавая ей соответствующие аргументы.
         :param func:     Имя функции, которую нужно вызвать, без скобок.
-            Например: "someJavascriptFunctionName"
+            Например: "someJavascriptFunctionName", или "console.log"
         :param data:     Любое количество аргументов из простых python-типов.
         """
         # args = ", ".join((encode(d).decode("utf-8") for d in data))
