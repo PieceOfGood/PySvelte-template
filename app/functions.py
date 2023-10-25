@@ -13,7 +13,7 @@ async def extend(conn: Connection) -> None:
         # ? Выводит в stdout
         log.info(f"JS-counter value: <red>{count}</>")
         # ? И в консоли отладчика браузера
-        ui.exec("console.log", "You click me:", count)
+        await ui.exec("console.log", "You click me:", count)
 
     async def unload() -> None:
         """ Вызывается при перезагрузке UI, переходе на
