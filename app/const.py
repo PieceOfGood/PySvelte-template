@@ -14,8 +14,8 @@ SOURCES: dict[str, Path] = {
     "": HTML_DIR / "index.html",
     "MuseoSansCyrl-300.woff2": HTML_SRC_DIR / "MuseoSansCyrl-300.woff2",
     "favicon.png": HTML_SRC_DIR / "favicon.png",
-    "bundle.css": JSCSS_DIR / "bundle.css",
-    "bundle.js": JSCSS_DIR / "bundle.js",
+    "main-app.css": JSCSS_DIR / "main-app.css",
+    "main-app.js": JSCSS_DIR / "main-app.js",
     "main.css": JSCSS_DIR / "main.css",
     "main.js": JSCSS_DIR / "main.js",
 }
