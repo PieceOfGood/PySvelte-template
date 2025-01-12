@@ -159,5 +159,10 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
 .vscode/
+
+# Закомментровать после установки
 svelte/
+
 SvelteAppUI/
+!svelte_src/src/lib/
+!svelte/src/lib/
